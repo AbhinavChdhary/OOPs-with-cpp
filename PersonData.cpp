@@ -32,78 +32,51 @@ class personData{
     string Zip, PhoneNo;
 
     public:
-    personData(string fname, string lname, string add,
-    string ct, string st, string zipCode, string PhoneNo){
-        FirstName = fname;
-        LastName = lname;
-        address = add;
-        ct = city;
-        state = st;
-        Zip = zipCode;
-        PhoneNo = PhoneNo;
+    void setData(){
+        cout<<"enter first and last name\n";
+        cin>>FirstName>>LastName;
+
+        cout<<"enter address\n";
+        getline(cin>>ws, address);
+
+        cout<<"enter city, state\n";
+        cin>>city>>state;
+
+        cout<<"Enter zip code and mobile no\n";
+        cin>>Zip>>PhoneNo;
     }
-    void setFirstName(string fname){
-        FirstName = fname;
-    }
-    void setLastName(string lname){
-        LastName = lname;
-    }
-    void setAddress(string add){
-        address = add;
-    }
-    void setCityName(string ct){
-        city = ct;
-    }
-    void setStateName(string st){
-        state = st;
-    }
-    void setZipCode(string zipCode){
-        Zip = zipCode;
-    }
-    void setPhoneNo(string pn){
-        PhoneNo = pn;
-    }
-    string getFirstName(){
-        return FirstName;
-    }
-    string getLastName(){
-        return LastName;
-    }
-    string getAddress(){
-        return address;
-    }
-    string getCityName(){
-        return city;
-    }
-    string getStateName(){
-        return state;
-    }
-    string getZipCode(){
-        return Zip;
-    }
-    string getPhone(){
-        return PhoneNo;
+    void displayData(){
+        cout<<FirstName<<" "<<LastName<<endl;
+        cout<<address<<endl;
+        cout<<city<<" "<<state<<endl;
+        cout<<Zip<<"\n"<<PhoneNo<<endl;
     }
 };
 class CustomerData: public personData{
     int CustomerId;
     bool MailingList = false;
     public:
-    CustomerData(int a, bool b){
-        CustomerId = a;
-        MailingList = b;
+    void inputData(){
+        personData::setData();
+        cout<<"Enter id of customer\n";
+        cin>>CustomerId;
+        char ch;
+        cout<<"Enter y/n if the customer wants to be on Mailing List\n";
+        cin>>ch;
+        if(ch=='y')
+            MailingList = true;
+        else
+            MailingList = false;
     }
-    void setCustomerId(int a){
-        CustomerId = a;
-    }
-    void setPhoneNo(bool b){
-        MailingList = b;
-    }
-    int getCustomerId(){
-        return CustomerId;
-    }
-    bool getMailingList(){
-        return MailingList;
+    void customerDataDisplay(){
+        personData::displayData();
+        cout<<"id: "<<CustomerId<<endl;
+        cout<<"on the mailing list? "<<MailingList<<endl;
     }
 };
+int main(){
+    CustomerData customer;
+    customer.inputData();
+    customer.customerDataDisplay();
+}
 
