@@ -18,12 +18,18 @@ class ConsDemo{
             cout<<(int)ch<<endl;
     }
     void SumDemo(string st1, string st2){
-        //if(st1.compare(st2)==0)
-            //cout<<
+        if(st1.compare(st2)==0)
+            cout<<"Strings Are Equal\n";
+        else    
+            cout<<"No not equal\n";
     }
 };
 
 int main(){
+    ConsDemo con;
+    con.SumDemo(2, 'p');
+    con.SumDemo(2, 5, 'a');
+    con.SumDemo("School", "College");
 
     return 0;
 }
