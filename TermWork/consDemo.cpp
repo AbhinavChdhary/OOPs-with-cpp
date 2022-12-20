@@ -8,15 +8,15 @@ class ConsDemo{
     public:
     void SumDemo(int x, char ch){
         if(ch=='p')
-            cout<<pow(x, 2)<<endl;
+            cout<<"Square: "<<pow(x, 2)<<endl;
         else
-            cout<<pow(x, 3)<<endl;
+            cout<<"Cube: "<<pow(x, 3)<<endl;
     }
     void SumDemo(int x, int y, char ch){
         if(ch=='a')
-            cout<<x+y<<endl;
+            cout<<"addition: "<<x+y<<endl;
         else
-            cout<<(int)ch<<endl;
+            cout<<"ASCII value: "<<(int)ch<<endl;
     }
     void SumDemo(string st1, string st2){
         if(st1.compare(st2)==0)
@@ -29,9 +29,20 @@ class ConsDemo{
 int main(){
     cout<<"INPUT/OUTPUT\nAbhinav Choudhary\nB.tech CST 49\n";
     ConsDemo con;
-    con.SumDemo(2, 'p');
-    con.SumDemo(2, 5, 'a');
-    con.SumDemo("School", "College");
+    int x, y;
+    char ch;
+    cout<<"Enter a number and a character:";
+    cin>>x>>ch;
+    con.SumDemo(x, ch);
+
+    cout<<"Enter two numbers and a character:";
+    cin>>x>>y>>ch;
+    con.SumDemo(x, y, ch);
+
+    string s1, s2;
+    cout<<"Enter two strings:";
+    cin>>s1>>s2;
+    con.SumDemo(s1, s2);
 
     return 0;
 }

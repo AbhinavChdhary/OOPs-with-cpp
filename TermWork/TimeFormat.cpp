@@ -37,7 +37,13 @@ public:
 int main()
 {
     cout << "INPUT/OUTPUT\nAbhinav Choudhary\nB.tech CST 49\n";
-    times A(11, 45, 59), B(5, 30, 5), C;
+    int h, m, s;
+    cout<<"Enter 1st hour, minute, second:\n";
+    cin>>h>>m>>s;
+    times A(h, m, s);
+    cout<<"Enter 2nd hour, minute, second:\n";
+    cin>>h>>m>>s;
+    times B(h, m, s), C;
     A.addtimes(B, C);
     C.display();
 
