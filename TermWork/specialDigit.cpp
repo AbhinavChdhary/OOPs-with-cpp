@@ -1,8 +1,10 @@
+//Abhinav Choudhary B.tech CST (49)
 #include <iostream>
  
 using namespace std;
  
 int main(){
+    cout<<"INPUT/OUTPUT\nAbhinav Choudhary\nB.tech CST 49\n";
     int x, copy;
     cout<<"INPUT:\n";
     cin>>x;

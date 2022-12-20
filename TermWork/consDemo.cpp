@@ -1,3 +1,4 @@
+//Abhinav Choudhary B.tech CST (49)
 #include <iostream>
 #include <math.h>
 
@@ -26,6 +27,7 @@ class ConsDemo{
 };
 
 int main(){
+    cout<<"INPUT/OUTPUT\nAbhinav Choudhary\nB.tech CST 49\n";
     ConsDemo con;
     con.SumDemo(2, 'p');
     con.SumDemo(2, 5, 'a');

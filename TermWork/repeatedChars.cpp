@@ -1,3 +1,4 @@
+//Abhinav Choudhary B.tech CST (49)
 #include <iostream>
  
 using namespace std;
@@ -22,6 +23,7 @@ void catchWord(string &word, string &res){
 }
  
 int main(){
+	cout<<"INPUT/OUTPUT\nAbhinav Choudhary\nB.tech CST 49\n";
 	string st, res="";
 	cout<<"INPUT:\n";
 	getline(cin, st);

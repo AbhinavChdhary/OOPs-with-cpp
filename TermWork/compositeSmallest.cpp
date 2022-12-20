@@ -1,3 +1,4 @@
+//Abhinav Choudhary B.tech CST (49)
 #include <iostream>
  
 using namespace std;
@@ -21,6 +22,7 @@ int smallest(int x){
 }
  
 int main(){
+    cout<<"INPUT/OUTPUT\nAbhinav Choudhary\nB.tech CST 49\n";
     int a, c;
     cout<<"INPUT:\n";
     cout<<"enter choice 1 for composite and 2 for smallest digit\n";

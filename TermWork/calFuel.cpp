@@ -1,3 +1,4 @@
+//Abhinav Choudhary B.tech CST (49)
 #include<iostream>
 
 using namespace std;
@@ -34,6 +35,7 @@ class Fuel{
     }
 };
 int main(){
+    cout<<"INPUT/OUTPUT\nAbhinav Choudhary\nB.tech CST 49\n";
     Fuel fuel;
     fuel.feedInfo();
     fuel.showInfo();
